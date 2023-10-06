@@ -78,10 +78,13 @@
     <Content Include="AddClassroom.aspx" />
     <Content Include="ClassroomList.aspx" />
     <Content Include="Classroom.aspx" />
+    <Content Include="JoinClassroom.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classroom.cs" />
     <Compile Include="ClassroomDataAccess.cs" />
+    <Compile Include="Discussion.cs" />
+    <Compile Include="DiscussionDataAccess.cs" />
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -131,6 +134,14 @@
     </Compile>
     <Compile Include="Classroom.aspx.designer.cs">
       <DependentUpon>Classroom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="JoinClassroom.aspx.cs">
+      <DependentUpon>JoinClassroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JoinClassroom.aspx.designer.cs">
+      <DependentUpon>JoinClassroom.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

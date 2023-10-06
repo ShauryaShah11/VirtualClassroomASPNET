@@ -14,5 +14,7 @@ namespace Project
         public string ClassCode { get; set; }
         public DateTime CreationDate { get; set; }
 
+        public string UserName { get; set; }
+
     }
 }

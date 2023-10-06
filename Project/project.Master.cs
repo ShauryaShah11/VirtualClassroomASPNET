@@ -13,5 +13,12 @@ namespace Project
         {
 
         }
+        protected void LogoutButton_Click(object sender, EventArgs e)
+        {
+            // Abandon the session
+            Session.Abandon();
+
+            Response.Redirect("login.aspx");
+        }
     }
 }

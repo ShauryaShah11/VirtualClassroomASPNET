@@ -37,7 +37,7 @@ namespace Project
             {
                 SqlConnection conn = new SqlConnection();
                 conn.ConnectionString = WebConfigurationManager.ConnectionStrings["classroomConnection"].ConnectionString;
-                string query = "INSERT INTO Users (Username,Password,FirstName,LastName,Email,Role,RegistrationDate) VALUES (@Username, @Password,@FirstName,@LastName,@Email,@Role,@RegistrationDate)";
+                string query = "INSERT INTO Users (Username,Password,FirstName,LastName,Email,RegistrationDate) VALUES (@Username, @Password,@FirstName,@LastName,@Email,@RegistrationDate)";
                 try
                 {
                     using (conn)

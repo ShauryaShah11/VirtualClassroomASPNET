@@ -102,19 +102,28 @@
                             <a class="nav-link active" aria-current="page" href="HomePage.aspx">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.aspx">Login</a>
+                            <a class="nav-link active" aria-current="page" href="JoinClassroom.aspx">Join Classroom</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="AddClassroom.aspx">Add Classroom</a></li>
-                                <li><a class="dropdown-item" href="ClassroomList.aspx">ClassRoom List</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="Classroom.aspx">Classroom</a></li>
-                            </ul>
-                        </li>
+                        <% if (Session["email"] == null) { %>
+                            <!-- Display when not logged in -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.aspx">Sign In</a>
+                            </li>
+                        <% } else { %>
+                            <!-- Display when logged in -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Classroom
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="AddClassroom.aspx">Add Classroom</a></li>
+                                    <li><a class="dropdown-item" href="ClassroomList.aspx">Classroom List</a></li>
+                                </ul>
+                            </li>
+                            <li class="d-flex">
+                                <asp:Button ID="btnLogin" runat="server" Text="Logout" CssClass="btn btn-outline-success" OnClick="LogoutButton_Click" />
+                            </li>
+                        <% } %>
                     </ul>
                 </div>
             </div>

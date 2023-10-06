@@ -41,7 +41,7 @@
                             <p>Join Code: <%# Eval("ClassCode") %></p>
                             <p>Creation date: <%# Eval("CreationDate") %></p>
 
-                            <a href="#" class="btn btn-primary">Go to Classroom</a>
+                            <a href="Classroom.aspx?code=<%# Eval("ClassCode") %>" class="btn btn-primary">Go to Classroom</a>
                         </div>
                     </div>
                 </ItemTemplate>
