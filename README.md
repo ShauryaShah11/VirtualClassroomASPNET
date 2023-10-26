@@ -7,7 +7,7 @@
 1. Open SQL Server Management Studio (SSMS).
 2. Connect to your local SQL Server instance.
 3. Right-click on "Databases" in the Object Explorer.
-4. Select "Attach" and choose the `database.mdf` file.
+4. Select "Attach" and choose the `Virtual_classroom.mdf` file.
 
 ### Get the Database Path
 
